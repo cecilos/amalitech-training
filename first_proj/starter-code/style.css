@@ -1,0 +1,99 @@
+/*define primary colors to be used in the project*/
+:root{
+
+}
+/*use box-sizing to manage the margins and paddings of elements*/
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin:0 200px;
+}
+
+
+/*lets tackle the layout of the page using flex*/
+.container{
+    display: flex;
+    flex-direction: column;/*to set the flex items along the vertical axis*/
+    row-gap: 30px;
+}
+/*tackle each sub-parent container*/
+.header{
+    display: flex;
+    justify-content:space-between;
+}
+.master-container{
+    display: flex;
+    column-gap: 10px;
+}
+.keyboard-container{
+    display: flex;
+    gap:30px;
+    /*border: 1px solid red;*/
+}
+.features-container{
+    display: flex;
+    gap:10px;
+    margin-top:50px;
+    /*border: 1px solid red;*/
+}
+.footer{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+/*lets tackle the first sub-container of content*/
+.master-container > *{
+    flex: 1;
+    /*border:1px solid red;*/
+}
+/*
+.typemaster-container{
+    
+}*/
+/*tackle the flex items in the container*/
+.right{
+    display: block;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+/*tackle content in the first flex item*/
+.right .typemaster-img > img{
+    /*max-width: 540px;*/
+    width:100%;    
+}
+/*tackle the second sub-container named keyboard-container*/
+/*.keyboard-container > *{
+    flex:1;
+}*/
+.phone-img{
+    flex:20%;
+    /*border: 1px solid cyan;*/
+}
+.glass-img{
+    flex:40%;
+    /*border: 1px solid cyan;*/
+}
+.mwk-text{
+    flex:40%;
+    align-self: center;
+    margin-left: 50px;/*to give a little space to the left of the middle picture*/
+    /*border:1px solid cyan;*/
+}
+.phone-img > img{
+    width:100%;
+    height:100%;
+}
+.glass-img > img{
+    width:100%;
+    height: 100%;
+}
+
+/*tackle the last container-features container*/
+
+
+
