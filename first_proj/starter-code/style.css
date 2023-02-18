@@ -1,5 +1,13 @@
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap');
+
 /*define primary colors to be used in the project*/
 :root{
+    --prim-orange:#F16718;
+    --sec-orange:#FF9B62;
+    --dark-shadow:#162542;
+    --light-shadow:#7B8BAD;
+    --grey:#E8EFF2;
+    --white:#FFFFFF;
 
 }
 /*use box-sizing to manage the margins and paddings of elements*/
@@ -21,6 +29,7 @@ body{
 .header{
     display: flex;
     justify-content:space-between;
+    margin-top: 55px;
 }
 .master-container{
     display: flex;
@@ -64,7 +73,8 @@ body{
 /*tackle content in the first flex item*/
 .right .typemaster-img > img{
     /*max-width: 540px;*/
-    width:100%;    
+    width:100%; 
+    border-radius: 10px;   
 }
 /*tackle the second sub-container named keyboard-container*/
 /*.keyboard-container > *{
@@ -87,13 +97,46 @@ body{
 .phone-img > img{
     width:100%;
     height:100%;
+    border-radius: 10px;
 }
 .glass-img > img{
     width:100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 /*tackle the last container-features container*/
-
+/*design the buttons*/
+.btn{
+    padding:21px;
+    border-radius: 5px;
+    /*border-color: aliceblue;*/
+    text-transform: uppercase;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+}
+/*work on the colors for the individual buttons*/
+.grey-btn{
+    background-color: var(--grey);
+    border-color: var(--grey);
+    color: var(--dark-shadow);
+}
+.orange-btn{
+    background-color: var(--prim-orange);
+    border-color: var(--prim-orange);
+    color: var(--white);
+}
+/*typography design*/
+h1,h2,h3{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.span-text{
+    margin-left: 40px;
+    text-transform: uppercase;
+}
 
 
