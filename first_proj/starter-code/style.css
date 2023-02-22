@@ -58,12 +58,9 @@ body{
 /*lets tackle the first sub-container of content*/
 .master-container > *{
     flex: 1;
-    /*border:1px solid red;*/
-}
-/*
-.typemaster-container{
     
-}*/
+}
+
 /*tackle the flex items in the container*/
 .right{
     display: block;
@@ -75,7 +72,6 @@ body{
     gap:10px;
 }
 /*tackle content in the first flex item*/
-/*.right .typemaster-img > picture > img*/
 .typemaster-img > picture > img{
     /*max-width: 540px;*/
     width:100%; 
@@ -83,9 +79,7 @@ body{
     border-radius: 10px;   
 }
 /*tackle the second sub-container named keyboard-container*/
-/*.keyboard-container > *{
-    flex:1;
-}*/
+
 .phone-img{
     flex:20%;
     /*border: 1px solid cyan;*/
