@@ -154,7 +154,16 @@ h3{font-size: 24px;
     flex-direction: column;
     gap:15px;
 }
-
+/*hover state of buttons*/
+.orange-btn:hover{
+    background-color: var(--sec-orange);
+    border-color: var(--sec-orange);
+}
+.grey-btn:hover{
+    background-color: var(--dark-shadow);
+    border-color: var(--dark-shadow);
+    color: var(--white);
+}
 
 
 /*media queries */
@@ -175,13 +184,13 @@ h3{font-size: 24px;
     .phone-img{
         /*flex:30%;*/
         max-width: 30%;
-        border: 1px solid red;
+       /* border: 1px solid red;*/
     
     }
     .glass-img{
         /*flex:70%;*/
        max-width: 60%;
-       border: 1px solid yellow;
+       /*border: 1px solid yellow;*/
     }
 
     .feature,.mwk-text{
