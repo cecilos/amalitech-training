@@ -13,9 +13,11 @@
 /*use box-sizing to manage the margins and paddings of elements*/
 *,*::before,*::after{
     box-sizing: border-box;
+    margin: 0;
 }
 body{
     margin:0 200px;
+    /*color:var(--light-shadow);*/
 }
 
 
@@ -52,6 +54,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 /*lets tackle the first sub-container of content*/
 .master-container > *{
     flex: 1;
@@ -69,11 +72,14 @@ body{
     display: flex;
     flex-direction: column;
     align-self: center;
+    gap:10px;
 }
 /*tackle content in the first flex item*/
-.right .typemaster-img > img{
+/*.right .typemaster-img > picture > img*/
+.typemaster-img > picture > img{
     /*max-width: 540px;*/
     width:100%; 
+    height: 100%;
     border-radius: 10px;   
 }
 /*tackle the second sub-container named keyboard-container*/
@@ -94,12 +100,13 @@ body{
     margin-left: 50px;/*to give a little space to the left of the middle picture*/
     /*border:1px solid cyan;*/
 }
-.phone-img > img{
+/*once i introduce the picture element i had to rewrite the path of specificity*/
+.phone-img > picture > img{
     width:100%;
     height:100%;
     border-radius: 10px;
 }
-.glass-img > img{
+.glass-img > picture > img{
     width:100%;
     height: 100%;
     border-radius: 10px;
@@ -113,10 +120,9 @@ body{
     /*border-color: aliceblue;*/
     text-transform: uppercase;
     font-family: 'Barlow';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 26px;
+    /*line-height: 26px;*/
 }
 /*work on the colors for the individual buttons*/
 .grey-btn{
@@ -133,10 +139,121 @@ body{
 h1,h2,h3{
     text-transform: uppercase;
     font-weight: 900;
+    font-family: 'Barlow';
 }
+h1{font-size: 48px;}
+h2{font-size:32px;}
+h3{font-size: 24px;
+    margin-bottom: 12px;}
+
 .span-text{
-    margin-left: 40px;
+    margin-left: 20px;
     text-transform: uppercase;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--light-shadow);
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+
+
+/*media queries */
+@media screen and (max-width:399px) {
+    body{
+        margin: 0;
+    }
+    .master-container, .features-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    }
+    .keyboard-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .phone-img{
+        /*flex:30%;*/
+        max-width: 30%;
+        border: 1px solid red;
+    
+    }
+    .glass-img{
+        /*flex:70%;*/
+       max-width: 60%;
+       border: 1px solid yellow;
+    }
+
+    .feature,.mwk-text{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+}
+
+@media screen and (min-width:400px) and (max-width:800px) {
+    body{
+        margin: 0;
+    }
+    .master-container{
+        flex-direction: row;
+    }
+    .typemaster-container .left{
+        flex:1;
+        max-width: 70%;
+        border: 1px solid red;
+    }
+    
+    
+    
+    /* make flex of the text container*/
+    .keyboard-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    
+
+    .mwk-text{
+        display: flex;
+        column-gap: 50px;
+        justify-content: space-between;
+    }
+    .features-container{
+        flex-wrap: wrap;
+        gap:10px;
+  }
+
+    .feature{
+        flex:40%;
+        max-width: 50%;
+        border: 1px solid orange;
+    }
+    
+    
+    
+    /* these were small by default so we set a min-width for appearance*/
+    .typemaster-img > picture > img{
+        /*max-width: 540px;*/
+        min-width: 200px;
+        
+     
+    }
+    .phone-img > picture > img{
+        min-width: 100px;
+    }
+    .glass-img > picture > img{
+        min-width: 200px;
+    }
+    
 }
 
 

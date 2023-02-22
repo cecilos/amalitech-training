@@ -11,7 +11,10 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="header-item logo"><img src="./assets/shared/logo.svg" alt="TM-LOGO"></div>
+      <div class="header-item logo">
+
+        <img src="./assets/shared/logo.svg" alt="TM-LOGO">
+      </div>
       <div class="header-item text"><button class="btn grey-btn">Pre-order now</button></div>
     </div>
     <div class="master-container">
@@ -20,23 +23,37 @@
       <h1>Typemaster <br> keyboard</h1>
 
      <p> Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
-      mechanical typing experience.</p>
+      mechanical typing experience.</p></div>
       <div class="button-region">
      <button class="btn orange-btn">Pre-order now</button>
      <span class="span-text"> Release on 5/27</span>
     </div>
-      </div>
+      
       </div>
       <div class="typemaster-container right">
-        <div class="typemaster-img"><img src="./assets/desktop/image-keyboard.jpg" alt="Typemaster Keyboard"></div>
+        <div class="typemaster-img">
+          <picture>
+            <source media="(min-width: 400px)" srcset="./assets/desktop/image-keyboard.jpg" sizes="">
+            <source media="(min-width: 400px)" srcset="./assets/tablet/image-keyboard.jpg" sizes="">
+            <img src="./assets/mobile/image-keyboard.jpg" alt="Typemaster Keyboard">
+          </picture>
+        </div>
       </div>
     </div>
     <div class="keyboard-container">
       <div class="item phone-img">
-        <img src="./assets/desktop/image-phone-and-keyboard.jpg" alt="Phone and Keyboard">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./assets/desktop/image-phone-and-keyboard.jpg" sizes="">
+          <source media="(min-width: 400px)" srcset="./assets/tablet/image-phone-and-keyboard.jpg" sizes="">
+        <img src="./assets/mobile/image-phone-and-keyboard.jpg" alt="Phone and Keyboard">
+      </picture>
       </div>
       <div class="item glass-img">
-        <img src="./assets/desktop/image-glass-and-keyboard.jpg" alt="Glass and Keyboard">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./assets/desktop/image-glass-and-keyboard.jpg" sizes="">
+          <source media="(min-width: 400px)" srcset="./assets/tablet/image-glass-and-keyboard.jpg" sizes="">
+          <img src="./assets/mobile/image-glass-and-keyboard.jpg" alt="Glass and Keyboard">
+        </picture>
       </div>
       <div class="item mwk-text">
        <h2> Mechanical <br> wireless <br> keyboard</h2>
