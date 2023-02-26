@@ -1,6 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap');
 
-/*define primary colors to be used in the project*/
+/*define colors to be used in the project*/
 :root{
     --prim-orange:#F16718;
     --sec-orange:#FF9B62;
@@ -18,6 +18,22 @@
 body{
     margin:0 200px;
     /*color:var(--light-shadow);*/
+}
+
+span,p{
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #7B8BAD;
+}
+.footer-text{
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #7B8BAD;
 }
 
 
@@ -59,6 +75,7 @@ body{
 .master-container > *{
     flex: 1;
     
+    
 }
 
 /*tackle the flex items in the container*/
@@ -82,7 +99,7 @@ body{
 
 .phone-img{
     flex:20%;
-    /*border: 1px solid cyan;*/
+    /*border: 1px solid red;*/
 }
 .glass-img{
     flex:40%;
@@ -91,14 +108,26 @@ body{
 .mwk-text{
     flex:40%;
     align-self: center;
+    max-width: auto;
     margin-left: 50px;/*to give a little space to the left of the middle picture*/
     /*border:1px solid cyan;*/
+}
+.mwk-text > p{
+    margin-top: 10px;
 }
 /*once i introduce the picture element i had to rewrite the path of specificity*/
 .phone-img > picture > img{
     width:100%;
     height:100%;
     border-radius: 10px;
+    padding:0 50%;
+    background-color: var(--prim-orange);
+    background-blend-mode: multiply;
+    background-image: url(./assets/desktop/image-phone-and-keyboard.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*filter:sepia(300%) hue-rotate(250deg) saturate(450%);*/
+    
 }
 .glass-img > picture > img{
     width:100%;
@@ -164,6 +193,37 @@ h3{font-size: 24px;
     border-color: var(--dark-shadow);
     color: var(--white);
 }
+/*insert the pattern squares*/
+.right-square{
+    position: absolute;
+    /*border: 1px solid red;*/
+    right: 0px;
+    object-fit:cover;
+    max-width: 150px;
+    overflow: hidden;
+    
+}
+.rightsq{
+    display: block;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.left-square{
+    position: absolute;
+    /*border: 1px solid orange;*/
+    left:0px;
+    align-self: flex-end;
+    max-width: 150px;
+    overflow:hidden;
+    rotate: 180deg;
+    
+    
+}
+.leftsq{
+    display: block;
+
+}
 
 
 /*media queries */
@@ -198,24 +258,27 @@ h3{font-size: 24px;
         align-items: center;
         justify-content: center;
     } 
+    .right-square,.left-square{
+        display: none;
+    }
     
 }
 
 @media screen and (min-width:400px) and (max-width:800px) {
     body{
         margin: 0;
+        overflow-x: hidden;
     }
     .master-container{
+        display: flex;
         flex-direction: row;
-    }
-    .typemaster-container .left{
-        flex:1;
-        max-width: 70%;
-        border: 1px solid red;
+        gap:10px;
     }
     
-    
-    
+    .typemaster-container{
+        flex: 1;
+        /*border: 1px solid red;*/
+    }
     /* make flex of the text container*/
     .keyboard-container{
         flex-direction: row;
@@ -232,30 +295,26 @@ h3{font-size: 24px;
     }
     .features-container{
         flex-wrap: wrap;
-        gap:10px;
-  }
+        gap:20px;
+    }
 
     .feature{
         flex:40%;
         max-width: 50%;
-        border: 1px solid orange;
+       /* border: 1px solid orange;*/
     }
-    
-    
-    
-    /* these were small by default so we set a min-width for appearance*/
+    .right-square,.left-square{
+        display: none;
+    }
     .typemaster-img > picture > img{
-        /*max-width: 540px;*/
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         min-width: 200px;
+        min-height: 400px;
         
-     
     }
-    .phone-img > picture > img{
-        min-width: 100px;
-    }
-    .glass-img > picture > img{
-        min-width: 200px;
-    }
+
     
 }
 
